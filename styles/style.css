@@ -212,7 +212,10 @@ header {
   .main-article {
     flex-direction: column;
     align-items: stretch;
-    width: 100%;
+    width: 93.5%;
+  }
+  .main-article-container {
+    width: auto;
   }
   .articles-container {
     flex-direction: column;
@@ -220,10 +223,24 @@ header {
     width: 93.5%;
     padding: 0;
   }
+
   .article {
     width: 100%;
-    justify-content: center;
+    justify-content: inline-block;
     text-align: left;
     margin-bottom: 1.25rem;
+  }
+
+  @media (max-width: 1024px) and (min-width: 760px) {
+    .navbar ul {
+      list-style-type: unset;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+    }
+    .articles-container {
+      justify-content: start;
+    }
   }
 }
